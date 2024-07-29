@@ -14,7 +14,7 @@ keywords = ["orm", "database", "sql"]
 
 [dependencies]
 njord_derive = { version = "0.3.0", path = "../njord_derive" }
-rusqlite = { version = "0.32.0", features = ["bundled"] }
+rusqlite = { version = "0.32.1", features = ["bundled"] }
 log = "0.4.22"
 rand = "0.8.4"
 
