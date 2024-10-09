@@ -120,6 +120,8 @@ pub fn table_derive(input: TokenStream) -> TokenStream {
                     let mut columns = std::collections::HashMap::new();
                     #(
                         let column_type = match stringify!(#field_types) {
+                            "AutoIncrementPrimaryKey < usize >" => "INTEGER PRIMARY KEY AUTOINCREMENT",
+                            "PrimaryKey < usize > " => "INTEGER PRIMARY KEY",
                             "i64" | "i32" | "i16" | "i8" | "u64" | "u32" | "u16" | "u8" | "usize" => "INTEGER",
                             "String" => "TEXT",
                             "f64" | "f32" => "REAL",
@@ -130,6 +132,8 @@ pub fn table_derive(input: TokenStream) -> TokenStream {
                             "Option<Vec<u8>>" => "BLOB NULL",
                             "bool" => "TEXT",
                             _ => {
+                                println!("Warning: Unknown data type for column '{}' '{}'", stringify!(#field_names), stringify!(#field_types));
+                                
                                 eprintln!("Warning: Unknown data type for column '{}'", stringify!(#field_names));
                                 "UNKNOWN_TYPE"
                             }

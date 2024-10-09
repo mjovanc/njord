@@ -31,6 +31,7 @@ use std::path::Path;
 
 use rusqlite::{Connection, Error};
 
+pub mod create;
 pub mod delete;
 pub mod error;
 pub mod insert;
