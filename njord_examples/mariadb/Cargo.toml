@@ -11,4 +11,4 @@ njord_derive = { version = "0.5.0", path = "../../njord_derive" }
 tokio = { version = "1", features = ["full"] }
 serde = { version = "1.0.217", features = ["derive"] }
 reqwest = { version = "0.12", features = ["json"] }
-serde_json = "1.0.133"
+serde_json = "1.0.139"
