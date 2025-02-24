@@ -25,6 +25,6 @@ sqlite = []
 njord = { version = "0.5.0", path = "../njord" }
 njord_derive = { version = "0.5.0", path = "../njord_derive" }
 rusqlite = { version = "0.32.1", features = ["bundled"] }
-clap = { version = "4.5.23", features = ["cargo", "derive"] }
+clap = { version = "4.5.30", features = ["cargo", "derive"] }
 toml = "0.8.12"
 serde = { version = "1.0", features = ["derive"] }
